@@ -30,11 +30,23 @@ const CURB_POSTER_URL =
 const EAST_LOS_HIGH_POSTER_URL =
   "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
 
-// This is an array of strings (TV show titles)
-let titles = [
-  "Fresh Prince of Bel Air",
-  "Curb Your Enthusiasm",
-  "East Los High",
+// This is an array of strings (closet items)
+let closetItems = [
+  {
+    type: "Top",
+      name: "Burgundy Knit Sweater",
+      imageURL: "https://static.zara.net/assets/public/b1d0/5253/ebf84b4eb4e6/f507c4752d1f/02893100605-e1/02893100605-e1.jpg?ts=1740581556773",
+  },
+  {
+    type: "Bottom",
+      name: "Black Striped Jeans",
+      imageURL: "https://imageseu.urbndata.com/is/image/UrbanOutfittersEU/0122593371467_001_b?$redesign-zoom-5x$",
+  },
+  {
+    type: "Shoes",
+      name: "Cherry Red Loafers",
+      imageURL: "https://m.media-amazon.com/images/I/71vrknim1nL._AC_SL1500_.jpg",
+  },
 ];
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
@@ -45,22 +57,12 @@ function showCards() {
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-  for (let i = 0; i < titles.length; i++) {
-    let title = titles[i];
-
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    let imageURL = "";
-    if (i == 0) {
-      imageURL = FRESH_PRINCE_URL;
-    } else if (i == 1) {
-      imageURL = CURB_POSTER_URL;
-    } else if (i == 2) {
-      imageURL = EAST_LOS_HIGH_POSTER_URL;
-    }
+  for (let i = 0; i < closetItems.length; i++) {
+    let item = closetItems[i];
+    
 
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL); // Edit title and image
+    editCardContent(nextCard, item, item.imageURL); // Edit title and image
     cardContainer.appendChild(nextCard); // Add new card to the container
   }
 }
@@ -92,6 +94,6 @@ function quoteAlert() {
 }
 
 function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
+  closetItems.pop(); // Remove last item in closetItems array
   showCards(); // Call showCards again to refresh
 }
