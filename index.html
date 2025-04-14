@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Today's Outfit! | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <title>Today's Outfit! | Build Your Look</title>
+    <meta name="description" content="A fun way to build and organize your outfits!" />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
   </head>
@@ -11,15 +11,23 @@
     <header class="main-header">
       <h1 class="title">Today's Outfit!</h1>
     </header>
+    
+    <div id="current-outfit">
+      <h2>Your Current Outfit</h2>
+      <p id="selected-top">Top: [none]</p>
+      <p id="selected-bottom">Bottom: [none]</p>
+      <p id="selected-shoes">Shoes: [none]</p>
+    </div>
+    
     <div id="card-container"></div>
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
+        <h2>Item Title</h2>
+        <img src="" alt="Item Image" />
         <ul>
           <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
+          <li>Size: S</li>
+          <li>Color: Burgundy</li>
         </ul>
       </div>
     </div>
