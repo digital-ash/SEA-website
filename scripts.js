@@ -41,9 +41,16 @@ let closetItems = [
       imageURL: "https://m.media-amazon.com/images/I/71vrknim1nL._AC_SL1500_.jpg",
   },
 ];
-// Your final submission should have much more data than this, and
-// you should use more than just an array of strings to store it all.
 
+function selectItem(item) {
+  if (item.type === "Top") {
+    document.getElementById("selected-top").textContent = "Top: " + item.name;
+  } else if (item.type === "Bottom") {
+    document.getElementById("selected-bottom").textContent = "Bottom: " + item.name;
+  } else if (item.type === "Shoes") {
+    document.getElementById("selected-shoes").textContent = "Shoes: " + item.name;
+  }
+}
 // This function adds cards the page to display the data in the array
 function showCards() {
   const cardContainer = document.getElementById("card-container");
