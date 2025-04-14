@@ -14,8 +14,8 @@ body {
   margin: 0;
   font-size: 6em;
   font-family: "Courier New";
-  font-weight: bold;
-  color: purple;
+  font-weight: 400;
+  color: rgd(142, 0, 206);
 }
 
 #card-container {
