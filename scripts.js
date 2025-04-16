@@ -100,6 +100,7 @@ function showCards() {
   }
 }
 
+// Make the card visible on page
 function editCardContent(card, newTitle, newImageURL, size, brand) {
   card.style.display = "block";
 
