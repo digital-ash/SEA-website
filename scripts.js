@@ -73,7 +73,7 @@ function showCards() {
     editCardContent(nextCard, item.name, item.imageURL); // Edit title and image
 
     nextCard.addEventListener("click", function() {
-      selectItem(item);
+      selectItem(item);  //places selected item(s) in "Your Current Outfit"
     });
     
     cardContainer.appendChild(nextCard); // Add new card to the container
@@ -103,14 +103,34 @@ function editCardContent(card, newTitle, newImageURL, size, brand) {
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
 
-function quoteAlert() {
-  console.log("Button Clicked!");
-  alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!"
-  );
+let favOutfit = {
+  top: null,
+  bottom: null,
+  shoes: null,
+};
+
+function saveFavOutfit() {
+  favOutfit.top = document.getElementById("selected-top").textContent;
+  favOutfit.bottom = document.getElementById("selected-bottom").textContent;
+  favOutfit.shoes = document.getElementById("selected-shoes").textContent;
+
+  alert("Your outfit has been saved as a favorite!");
+  
 }
 
-function removeLastCard() {
-  closetItems.pop(); // Remove last item in closetItems array
-  showCards(); // Call showCards again to refresh
+function loadFavOutfit() {
+  if (favOutfit.top && favOutfit.bottom && favOutfit.shoes) {
+    document.getElementById("selected-top").textContent = favOutfit.top;
+    document.getElementById("selected-bottom").textContent = favOutfit.bottom;
+    document.getElementById("selected-shoes").textContent = favOutfit.shoes;
+
+    alert("Favorite Outfit loaded!");
+  }
+}
+
+//Let's user reset their whole outfit
+function resetOutfit() {
+  document.getElementById("selected-top").textContent = "Top: [none]";
+  document.getElementById("selected-bottom").textContent = "Bottom: [none]";
+  document.getElementById("selected-shoes").textContent = "Shoes: [none]";
 }
