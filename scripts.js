@@ -62,7 +62,7 @@ let closetItems = [
     },
   {
     type: "Shoes",
-      name: "Chuck 70 High Top",
+      name: "Chuck 70 High Tops",
       size: "6",
       brand: "Converse",
       imageURL: "https://shoegallerymiami.com/cdn/shop/products/CONVERSE-CHUCK-70-HIGH-TOP-BLACK-EGRET-162050C-3_1080x.jpg?v=1674867254",
