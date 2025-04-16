@@ -125,6 +125,8 @@ function loadFavOutfit() {
     document.getElementById("selected-shoes").textContent = favOutfit.shoes;
 
     alert("Favorite Outfit loaded!");
+  } else {
+    alert("No favorite outfit saved yet!");
   }
 }
 
