@@ -84,17 +84,17 @@ function editCardContent(card, newTitle, newImageURL, size, brand) {
   card.style.display = "block";
 
   const cardHeader = card.querySelector("h2");  
-  cardHeader.textContent = item.name;
+  cardHeader.textContent = newTitle;
 
   const cardImage = card.querySelector("img");
-  cardImage.src = item.ImageURL;
-  cardImage.alt = item.name + " Image";
+  cardImage.src = newImageURL;
+  cardImage.alt = newTitle + " Image";
 
   const sizeElement = card.querySelector(".size-info");
   const brandElement = card.querySelector(".brand-info");
 
-  sizeElement.textContent = "Size: " + item.size;
-  brandElement.textContent = "Brand: " + item.brand;
+  sizeElement.textContent = "Size: " + size;
+  brandElement.textContent = "Brand: " + brand;
 
 
   console.log("new card:", newTitle, "- html: ", card);
