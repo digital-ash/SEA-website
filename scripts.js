@@ -28,16 +28,23 @@ let closetItems = [
   {
     type: "Top",
       name: "Burgundy Knit Sweater",
+      size: "S",
+      color: "Burgundy",
+      brand: "Zara",
       imageURL: "https://static.zara.net/assets/public/b1d0/5253/ebf84b4eb4e6/f507c4752d1f/02893100605-e1/02893100605-e1.jpg?ts=1740581556773",
   },
   {
     type: "Bottom",
       name: "Black Striped Jeans",
+      size: "27",
+      brand: "Urban Outfitters",
       imageURL: "https://imageseu.urbndata.com/is/image/UrbanOutfittersEU/0122593371467_001_b?$redesign-zoom-5x$",
   },
   {
     type: "Shoes",
       name: "Cherry Red Loafers",
+      size: "6",
+      brand: "Doc Martens",
       imageURL: "https://m.media-amazon.com/images/I/71vrknim1nL._AC_SL1500_.jpg",
   },
 ];
@@ -73,22 +80,23 @@ function showCards() {
   }
 }
 
-function editCardContent(card, newTitle, newImageURL) {
+function editCardContent(card, newTitle, newImageURL, size, brand) {
   card.style.display = "block";
 
-  const cardHeader = card.querySelector("h2");
-
-  console.log("newTitle:", newTitle);
-  
-  cardHeader.textContent = newTitle;
+  const cardHeader = card.querySelector("h2");  
+  cardHeader.textContent = item.name;
 
   const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
+  cardImage.src = item.ImageURL;
+  cardImage.alt = item.name + " Image";
 
-  // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
+  const sizeElement = card.querySelector(".size-info");
+  const brandElement = card.querySelector(".brand-info");
+
+  sizeElement.textContent = "Size: " + item.size;
+  brandElement.textContent = "Brand: " + item.brand;
+
+
   console.log("new card:", newTitle, "- html: ", card);
 }
 
