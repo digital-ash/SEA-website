@@ -70,7 +70,7 @@ function showCards() {
     console.log("item:", item);
     
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, item.name, item.imageURL); // Edit title and image
+    editCardContent(nextCard, item.name, item.imageURL, item.size, item.brand); // Edit title and image
 
     nextCard.addEventListener("click", function() {
       selectItem(item);  //places selected item(s) in "Your Current Outfit"
