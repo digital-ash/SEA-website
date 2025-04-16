@@ -44,7 +44,7 @@ let closetItems = [
       name: "Cherry Red Loafers",
       size: "6",
       brand: "Dr. Martens",
-      imageURL: "https://m.media-amazon.com/images/I/71vrknim1nL._AC_SL1500_.jpg",
+      imageURL: "https://i.ebayimg.com/images/g/9e8AAOSwsIBjVmRF/s-l1200.jpg",
   },
   {
     type: "Top",
