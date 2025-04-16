@@ -123,6 +123,7 @@ function editCardContent(card, newTitle, newImageURL, size, brand) {
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
 
+// Allow users to save their favorite outfit
 let favOutfit = {
   top: null,
   bottom: null,
@@ -138,6 +139,7 @@ function saveFavOutfit() {
   
 }
 
+// Load the user's favorite outfit (the one they saved)
 function loadFavOutfit() {
   if (favOutfit.top && favOutfit.bottom && favOutfit.shoes) {
     document.getElementById("selected-top").textContent = favOutfit.top;
