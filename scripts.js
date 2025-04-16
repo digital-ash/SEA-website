@@ -59,6 +59,9 @@ function showCards() {
 
   for (let i = 0; i < closetItems.length; i++) {
     let item = closetItems[i];
+
+    console.log("item:", item);
+    
     const nextCard = templateCard.cloneNode(true); // Copy the template card
     editCardContent(nextCard, item.name, item.imageURL); // Edit title and image
 
@@ -74,6 +77,9 @@ function editCardContent(card, newTitle, newImageURL) {
   card.style.display = "block";
 
   const cardHeader = card.querySelector("h2");
+
+  console.log("newTitle:", newTitle);
+  
   cardHeader.textContent = newTitle;
 
   const cardImage = card.querySelector("img");
