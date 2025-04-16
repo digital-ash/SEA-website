@@ -59,10 +59,13 @@ function showCards() {
 
   for (let i = 0; i < closetItems.length; i++) {
     let item = closetItems[i];
-    
-
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, item, item.imageURL); // Edit title and image
+    editCardContent(nextCard, item.name, item.imageURL); // Edit title and image
+
+    nextCard.addEventListener("click", function() {
+      selectItem(item);
+    });
+    
     cardContainer.appendChild(nextCard); // Add new card to the container
   }
 }
