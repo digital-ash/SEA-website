@@ -29,7 +29,6 @@ let closetItems = [
     type: "Top",
       name: "Burgundy Knit Sweater",
       size: "S",
-      color: "Burgundy",
       brand: "Zara",
       imageURL: "https://static.zara.net/assets/public/b1d0/5253/ebf84b4eb4e6/f507c4752d1f/02893100605-e1/02893100605-e1.jpg?ts=1740581556773",
   },
@@ -46,6 +45,27 @@ let closetItems = [
       size: "6",
       brand: "Dr. Martens",
       imageURL: "https://m.media-amazon.com/images/I/71vrknim1nL._AC_SL1500_.jpg",
+  },
+  {
+    type: "Top",
+      name: "Pink Hoodie",
+      size: "S",
+      brand: "Gap",
+      imageURL: "https://www.marveljacket.com/wp-content/uploads/2024/07/Pink-Gap-Hoodie-4.jpeg",
+    },
+  {
+    type: "Bottom",
+      name: "Black Parachute Pants",
+      size: "M",
+      brand: "Stradivarius",
+      imageURL: "https://pistachio-eg.com/wp-content/uploads/2024/08/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4%D9%A0%D9%A8%D9%A2%D9%A7_%D9%A1%D9%A9%D9%A0%D9%A7%D9%A3%D9%A5_Chrome.jpg"
+    },
+  {
+    type: "Shoes",
+      name: "Chuck 70 High Top",
+      size: "6",
+      brand: "Converse",
+      imageURL: "https://shoegallerymiami.com/cdn/shop/products/CONVERSE-CHUCK-70-HIGH-TOP-BLACK-EGRET-162050C-3_1080x.jpg?v=1674867254",
   },
 ];
 
